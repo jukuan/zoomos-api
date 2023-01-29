@@ -1,0 +1,38 @@
+{
+    "name": "jukuan/zoomos-api",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Julian",
+            "email": "i@juljan.by"
+        }
+    ],
+    "keywords": [
+        "Belarus",
+        "Беларусь",
+        "zoomos.by"
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "sort-packages": true,
+    "autoload": {
+        "psr-4": {
+            "ZoomosApi\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "psr/log": "^3.0",
+        "symfony/http-client-contracts": "^3.2",
+        "symfony/http-client": "^6.2"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.12",
+        "phpunit/phpunit": "^9.5",
+        "symfony/var-dumper": "^6.2"
+    }
+}
