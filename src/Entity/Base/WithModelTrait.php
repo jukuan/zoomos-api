@@ -8,16 +8,20 @@ namespace ZoomosApi\Entity\Base;
  * @property-read array $fields
  * @method string|null getStringField(string $key, ?string $default = null)
  */
-trait WIthModelTrait
+trait WithModelTrait
 {
     public function getModel(): string
     {
         $model = $this->getStringField('model') ?? '';
 
-        // escape slashes before inserting to database
-        $model = str_replace('\\', '\\\\', $model);
-        $model = str_replace('/', '\\/', $model);
+        return $this->escapeString($model);
+    }
 
-        return trim($model);
+    protected function escapeString(string $value): string
+    {
+        $value = str_replace('\\', '\\\\', $value);
+        $value = str_replace('/', '\\/', $value);
+
+        return trim($value);
     }
 }

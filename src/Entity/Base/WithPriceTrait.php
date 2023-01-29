@@ -9,7 +9,7 @@ namespace ZoomosApi\Entity\Base;
  * @method string|null getStringField(string $key, ?string $default = null)
  * @method int|null getIntField(string $key, ?int $default = null)
  */
-trait WIthPriceTrait
+trait WithPriceTrait
 {
     public function getPrice(): int
     {

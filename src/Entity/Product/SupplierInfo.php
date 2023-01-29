@@ -3,16 +3,16 @@
 namespace ZoomosApi\Entity\Product;
 
 use ZoomosApi\Entity\Base\WithDateAddTrait;
-use ZoomosApi\Entity\Base\WIthModelTrait;
+use ZoomosApi\Entity\Base\WithModelTrait;
 use ZoomosApi\Entity\Base\WithNameTrait;
-use ZoomosApi\Entity\Base\WIthPriceTrait;
+use ZoomosApi\Entity\Base\WithPriceTrait;
 use ZoomosApi\Entity\BaseData;
 
 class SupplierInfo extends BaseData
 {
     use WithNameTrait;
-    use WIthModelTrait;
-    use WIthPriceTrait;
+    use WithModelTrait;
+    use WithPriceTrait;
     use WithDateAddTrait;
 
     public function getVendor(): string

@@ -5,16 +5,16 @@ declare(strict_types=1);
 namespace ZoomosApi\Entity;
 
 use DateTimeImmutable;
-use ZoomosApi\Entity\Base\WIthModelTrait;
-use ZoomosApi\Entity\Base\WIthPriceTrait;
+use ZoomosApi\Entity\Base\WithModelTrait;
+use ZoomosApi\Entity\Base\WithPriceTrait;
 use ZoomosApi\Entity\Product\Category;
 use ZoomosApi\Entity\Product\SupplierInfo;
 use ZoomosApi\Entity\Product\Vendor;
 
 class PriceListItem extends BaseData
 {
-    use WIthModelTrait;
-    use WIthPriceTrait;
+    use WithModelTrait;
+    use WithPriceTrait;
 
     private Vendor $vendor;
 
