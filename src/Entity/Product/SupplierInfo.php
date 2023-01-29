@@ -3,6 +3,7 @@
 namespace ZoomosApi\Entity\Product;
 
 use ZoomosApi\Entity\Base\WithDateAddTrait;
+use ZoomosApi\Entity\Base\WIthModelTrait;
 use ZoomosApi\Entity\Base\WithNameTrait;
 use ZoomosApi\Entity\Base\WIthPriceTrait;
 use ZoomosApi\Entity\BaseData;
@@ -10,17 +11,13 @@ use ZoomosApi\Entity\BaseData;
 class SupplierInfo extends BaseData
 {
     use WithNameTrait;
+    use WIthModelTrait;
     use WIthPriceTrait;
     use WithDateAddTrait;
 
     public function getVendor(): string
     {
         return $this->getStringField('vendor') ?? '';
-    }
-
-    public function getModel(): string
-    {
-        return $this->getStringField('model') ?? '';
     }
 
     public function getModelCode(): string

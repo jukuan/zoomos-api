@@ -12,6 +12,12 @@ trait WIthModelTrait
 {
     public function getModel(): string
     {
-        return $this->getStringField('model') ?? '';
+        $model = $this->getStringField('model') ?? '';
+
+        // escape slashes before inserting to database
+        $model = str_replace('\\', '\\\\', $model);
+        $model = str_replace('/', '\\/', $model);
+
+        return trim($model);
     }
 }
