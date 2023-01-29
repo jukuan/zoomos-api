@@ -43,7 +43,7 @@ abstract class BaseData
 
     public function getId(): int
     {
-        return (int) $this->fields['id'] ?? 0;
+        return (int) ($this->fields['id'] ?? 0);
     }
 
     /**
@@ -51,7 +51,7 @@ abstract class BaseData
      */
     protected function getDateTimeField(string $key): ?DateTimeImmutable
     {
-        $ts = (int) $this->fields[$key] ?? 0;
+        $ts = (int) ($this->fields[$key] ?? 0);
         $ts = $ts / 1000;
 
         if ($ts === 0) {
