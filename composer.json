@@ -1,11 +1,12 @@
 {
     "name": "jukuan/zoomos-api",
+    "version": "1.0.3",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "Julian",
-            "email": "i@juljan.by"
+            "email": "y.misiukevich@gmail.com"
         }
     ],
     "keywords": [
