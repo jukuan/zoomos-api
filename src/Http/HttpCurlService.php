@@ -72,6 +72,7 @@ class HttpCurlService
             return $this->response?->toArray() ?? [];
         } catch (ExceptionInterface $e) {
             $this->exception = $e;
+            $this->responseCode = 0;
 
             return [];
         }

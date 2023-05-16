@@ -26,28 +26,28 @@ class PriceListFetcher extends BaseFetcher
 
     public function useSupplierInfo(int $value = 0): static
     {
-        $this->queryParams['supplierInfo'] = 0;
+        $this->queryParams['supplierInfo'] = $value;
 
         return $this;
     }
 
     public function useWarrantyInfo(int $value = 0): static
     {
-        $this->queryParams['warrantyInfo'] = 0;
+        $this->queryParams['warrantyInfo'] = $value;
 
         return $this;
     }
 
     public function useCompetitorInfo(int $value = 0): static
     {
-        $this->queryParams['competitorInfo'] = 0;
+        $this->queryParams['competitorInfo'] = $value;
 
         return $this;
     }
 
     public function useDeliveryInfo(int $value = 0): static
     {
-        $this->queryParams['deliveryInfo'] = 0;
+        $this->queryParams['deliveryInfo'] = $value;
 
         return $this;
     }
